@@ -4,9 +4,10 @@
   "description": "OpenMusic backend app for Dicoding's Back-End Course submission",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js",
-    "lint": "eslint ./"
+    "start-prod": "NODE_ENV=production node ./src/server.js",
+    "start-dev": "nodemon ./src/server.js",
+    "lint": "eslint ./",
+    "migrate": "node-pg-migrate"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +16,7 @@
     "dotenv": "^16.0.0",
     "joi": "^17.6.0",
     "nanoid": "^3.3.2",
+    "node-pg-migrate": "^6.2.1",
     "nodemon": "^2.0.15",
     "pg": "^8.7.3",
     "postgresql": "^0.0.1"
