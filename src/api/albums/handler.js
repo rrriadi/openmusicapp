@@ -8,7 +8,7 @@ class AlbumsHandler {
 
     this.postAlbumHandler = this.postAlbumHandler.bind(this)
     this.getAlbumByIdHandler = this.getAlbumByIdHandler.bind(this)
-    this.putAlbumbyIdHandler = this.putAlbumbyIdHandler.bind(this)
+    this.putAlbumbyIdHandler = this.putAlbumByIdHandler.bind(this)
     this.deleteAlbumByIdHandler = this.deleteAlbumByIdHandler.bind(this)
   }
 
@@ -80,7 +80,7 @@ class AlbumsHandler {
     }
   }
 
-  async putAlbumbyIdHandler (request, h) {
+  async putAlbumByIdHandler (request, h) {
     try {
       this.validator.validateAlbumPayload(request.payload)
       const { id } = request.params
